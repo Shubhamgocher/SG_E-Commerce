@@ -2,8 +2,11 @@ import { createContext, useContext } from "react"
 
 export const cartContext=createContext({
     cartProducts:[null],
+    totalCartQuan:0,
     addProductToCart:(product)=>{},
     removeProductToCart:(id)=>{},
+    handleCartQuantityInc:(id)=>{},
+    handleCartQuantityDec:(id)=>{},
     
 
 });

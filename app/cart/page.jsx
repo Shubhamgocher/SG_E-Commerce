@@ -1,11 +1,14 @@
+import { Cart, Container } from '@/components'
 import React from 'react'
 
-const Cart = () => {
+const page = () => {
   return (
-    <div>
-      This is cart.
-    </div>
+    <>
+    <Container>
+      <Cart/>
+    </Container>
+    </>
   )
 }
 
-export default Cart
+export default page

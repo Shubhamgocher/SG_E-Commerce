@@ -1,9 +1,9 @@
 import React from "react";
 
-const QunatityHandle = ({ cartProduct,handleQuanDec,handleQuanInc }) => {
+const QunatityHandle = ({ cartProduct,handleQuanDec,handleQuanInc,cart}) => {
   return (
     <div className="flex items-center gap-2">
-      <span className="font-semibold">Quantity:</span>
+      {!cart && <span className="font-semibold">Quantity:</span>}
       <div className="flex justify-center items-center gap-2">
         <button
           className="w-5 h-5 rounded-md border-slate-300 border-2 flex items-center justify-center"

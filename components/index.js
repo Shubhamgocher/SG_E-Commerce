@@ -11,6 +11,8 @@ import ListReviews from "./products/ListReviews";
 import Heading from "./Heading";
 import Avatar from "./Avatar";
 import Button from "./Button";
+import Cart from "./Cart";
+import CartItemContent from "./CartItemContent";
 export {
   NavBar,
   Footer,
@@ -25,4 +27,6 @@ export {
   ListReviews,
   Avatar,
   Button,
+  Cart,
+  CartItemContent
 };

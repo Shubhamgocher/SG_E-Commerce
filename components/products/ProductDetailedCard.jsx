@@ -24,7 +24,7 @@ function ProductDetailedCard({ singleProduct }) {
   const [isProductInCart, setIsProductInCart] = useState(false);
   //console.log("cartP", cartProduct);
   const { cartProducts, addProductToCart } = useCart();
-  //console.log("cartProducts", cartProducts);
+  console.log("cartProducts", cartProducts);
 
   const handelColor = useCallback(
     (image) => setCartProduct((prev) => ({ ...prev, selectImg: image })),
