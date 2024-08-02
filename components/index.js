@@ -9,6 +9,8 @@ import QunatityHandle from "./products/QunatityHandle";
 import ProductImage from "./products/ProductImage";
 import ListReviews from "./products/ListReviews";
 import Heading from "./Heading";
+import Avatar from "./Avatar";
+import Button from "./Button";
 export {
   NavBar,
   Footer,
@@ -20,5 +22,7 @@ export {
   QunatityHandle,
   ProductImage,
   Heading,
-  ListReviews
+  ListReviews,
+  Avatar,
+  Button,
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading } from "..";
+import { Avatar, Heading } from "..";
 import { DaysConvertor } from "@/utils/daysConvertor";
 import { Rating } from "@mui/material";
 
@@ -10,7 +10,7 @@ const ListReviews = ({ reviews }) => {
       {reviews.map((review) => (
         <div key={review.id} className="flex flex-col justify-center">
           <div className="flex items-center gap-2">
-            <div>Avatar</div>
+            <Avatar src={review.user.image}/>
             <span className="font-semibold">{review.user.name}</span>
             <span>{DaysConvertor(review.createdDate)}</span>
           </div>

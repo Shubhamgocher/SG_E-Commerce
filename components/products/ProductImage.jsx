@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 const ProductImage = ({ images, cartProduct, handelColor }) => {
+  //console.log("cartProduct",cartProduct);
   return (
     <div className="grid grid-cols-8 h-full max-h-[500px] min-h-[300px] md:min-h-[400px] gap-4">
       <div className="flex flex-col items-center justify-center border-2 h-full max-h-[500px] min-h-[300px] md:min-h-[300px] shadow-md gap-2 cursor-pointer">
