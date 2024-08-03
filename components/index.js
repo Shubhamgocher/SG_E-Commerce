@@ -13,6 +13,8 @@ import Avatar from "./Avatar";
 import Button from "./Button";
 import Cart from "./Cart";
 import CartItemContent from "./CartItemContent";
+import CartQty from "./header/CartQty";
+import UserMenu from "./header/UserMenu";
 export {
   NavBar,
   Footer,
@@ -28,5 +30,8 @@ export {
   Avatar,
   Button,
   Cart,
-  CartItemContent
+  CartItemContent,
+  CartQty,
+  UserMenu,
+
 };

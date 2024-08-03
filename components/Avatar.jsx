@@ -7,7 +7,7 @@ const Avatar = ({src}) => {
     }
   return (
     <div>
-      <FaUserCircle/>
+      <FaUserCircle size={30}/>
     </div>
   )
 }

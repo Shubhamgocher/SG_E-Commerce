@@ -4,7 +4,8 @@ import React, { useCallback, useEffect, useState } from "react";
 
 const CartProvider = ({ children }) => {
   const [cartProducts, setCartProducts] = useState([]);
-  const [local, setLocal] = useState(false);
+  const [totalQty,setTotalQty]=useState(0);
+  const [totalPrice,setTotalPrice]=useState(0);
   //console.log("cartProducts",cartProducts)
   const addProductToCart = useCallback(
     (product) => {
@@ -46,6 +47,20 @@ const CartProvider = ({ children }) => {
     [cartProducts]
   );
 
+  useEffect(()=>{
+    if(cartProducts.length>0){
+      const acc=cartProducts?.reduce((acc,item)=>{
+        (acc.total+=item.quantity*item.price);
+        acc.qty+=item.quantity;
+        return acc;
+
+      },{total:0,qty:0})
+      console.log(acc);
+      setTotalPrice(acc.total);
+      setTotalQty(acc.qty);
+    }
+  },[cartProducts])
+
   useEffect(() => {
     if (typeof window !== undefined) {
       const cartProducts = localStorage.getItem("eCartProducts");
@@ -69,6 +84,8 @@ const CartProvider = ({ children }) => {
         removeProductToCart,
         handleCartQuantityDec,
         handleCartQuantityInc,
+        totalQty,
+        totalPrice,
       }}
     >
       {children}

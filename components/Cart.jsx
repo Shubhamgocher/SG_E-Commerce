@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, CartItemContent, Heading } from ".";
 import { useCart } from "@/hooks/Carthook";
 import { priceFormat } from "@/utils/priceFormat";
@@ -9,7 +9,8 @@ const Horizontal = () => (
   <hr className="border-[1.5px] mt-4 mb-4 border-gray-400" />
 );
 const Cart = () => {
-  const { cartProducts } = useCart();
+  const { cartProducts,totalPrice } = useCart();
+  
 
   return (
     <div>
@@ -36,14 +37,14 @@ const Cart = () => {
           <div className="flex flex-col">
             <div className="flex justify-between gap-20">
               <span className="font-bold">subtotal</span>
-              <span className="font-bold">$1000</span>
+              <span className="font-bold">{priceFormat(totalPrice)}</span>
             </div>
             <p className="tex-sm">
               Taxes and shipping are calculated at checkout.
             </p>
             <Button label={"checkout"} />
             <Link href={"/"} className=" flex items-center mt-2">
-               <MdArrowBack/>
+              <MdArrowBack />
               <span>Continue shopping</span>
             </Link>
           </div>

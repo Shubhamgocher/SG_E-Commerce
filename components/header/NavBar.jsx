@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "../Container";
 import React from "react";
+import { CartQty, UserMenu } from "..";
 
 const NavBar = () => {
   return (
@@ -13,8 +14,8 @@ const NavBar = () => {
             </Link>
             <div className="hidden md:block">serach</div>
             <div className="flex items-center gap-8 md:gap-12">
-              <div>cart</div>
-              <div>user</div>
+              <CartQty/>
+              <UserMenu/>
             </div>
           </div>
         </Container>
