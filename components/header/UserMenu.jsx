@@ -21,11 +21,9 @@ const UserMenu = () => {
       </div>
       {isOpen && (
         <div className="absolute right-8 top-[58px] flex flex-col justifu-center p-2 w-[170px] rounded-md bg-white shadow-md text-sm">
-          <div className="flex flex-col">
-            <Link href={'/login'}>Login</Link>
-            <Link href={'/login'}>Login</Link>
-            <Link href={'/login'}>Login</Link>
-            <Link href={'/login'}>Login</Link>
+          <div className="flex flex-col gap-2">
+            <Link href={"/login"}>Login</Link>
+            <Link href={"/register"}>Register</Link>
           </div>
         </div>
       )}
